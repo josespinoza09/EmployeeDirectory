@@ -66,7 +66,7 @@ function Employee() {
             <table className="table table-dark table-striped tableHeader">
                 <thead>
                     <tr className="tbHeader">
-                        <th class="name" onClick={ascendingSort} >Name</th>
+                        <th class="name" onClick={ascendingSort} >Name ↑↓</th>
                         <th>Image</th>
                         <th>Email</th>
                         <th>City</th>
