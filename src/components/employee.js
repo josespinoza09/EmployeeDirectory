@@ -41,3 +41,19 @@ function Employee() {
         setData(sortedEmployees)
 
     }
+
+    function employeeSearch(event) {
+        event.preventDefault();
+        let filtereddata = [...data]
+        const searchBarInput = event.target.value;
+
+        const result = filtereddata.filter(input => {
+            let values = Object.values(input).join('').toLowerCase();
+            return values.indexOf(searchBarInput.toLowerCase()) !== -1
+        }
+        )
+        if (searchBarInput === '') {
+            getEmployee()
+        }
+        setData(result)
+    }
