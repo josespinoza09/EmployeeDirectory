@@ -1,9 +1,9 @@
-
+import Employee from './components/employee';
 
 function App() {
   return (
     <>
-      
+      <Employee />
     </>
   );
 }
