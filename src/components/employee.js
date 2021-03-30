@@ -59,6 +59,9 @@ function Employee() {
     }
     return (
         <div className="container">
+            <div style={{color:'blue'}}>
+            <h1>EMPLOYEE DIRECTORY</h1>
+            </div>
             <Search employeeSearch={employeeSearch} />
             <table className="table table-dark table-striped tableHeader">
                 <thead>
