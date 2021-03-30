@@ -57,3 +57,44 @@ function Employee() {
         }
         setData(result)
     }
+    return (
+        <div className="container">
+            <Search employeeSearch={employeeSearch} />
+            <table className="table table-dark table-striped tableHeader">
+                <thead>
+                    <tr className="tbHeader">
+                        <th class="name" onClick={ascendingSort} >Name</th>
+                        <th>Image</th>
+                        <th>Email</th>
+                        <th>City</th>
+                        <th>Phone number</th>
+
+                    </tr>
+                </thead>
+
+                {data.map(user => {
+                    return (
+                        <tr>
+                            <th>
+                                {user.name.first}
+                                <br></br>
+                                {user.name.last}
+                            </th>
+
+                            <th><img src={user.picture.medium} alt="employee photos"></img></th>
+                            <th>{user.email}</th>
+                            <th>
+                                {user.location.city},
+                            <br></br>
+                                {user.location.country}
+                            </th>
+                            <th>{user.phone}</th>
+                        </tr>
+                    )
+                })}
+            </table>
+        </div>
+    )
+}
+
+export default Employee
